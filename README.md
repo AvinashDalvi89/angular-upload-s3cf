@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/aviboy2006/angular-build-upload-s3-cloudfront.svg?branch=master)](https://travis-ci.com/aviboy2006/angular-build-upload-s3-cloudfront)
+[![Build Status](https://travis-ci.com/aviboy2006/angular-upload-s3cf.svg?branch=master)](https://travis-ci.com/aviboy2006/angular-upload-s3cf)
 # Angular Build Upload to AWS S3 + Cloudfront
 
 This will help to automated uploading Angular project build code to AWS S3 and CloudFront cached invalidation part. This will ensure to take backup of existing code for rollback operation if required.
