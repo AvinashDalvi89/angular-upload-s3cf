@@ -19,7 +19,7 @@ This will help to automated uploading Angular project build code to AWS S3 and C
 
 ## Usage
 
-```
+```python
 pythonrequest = {
     'bucketName': REQUEST_PARAMS.get(env).get('bucketName'),
     'buildPath': build_path,
