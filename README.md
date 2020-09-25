@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.com/aviboy2006/angular-upload-s3cf.svg?branch=master)](https://travis-ci.com/aviboy2006/angular-upload-s3cf)
+<img src="https://img.shields.io/badge/made%20with-python-blue.svg" alt="made with python">
+
 # Angular Build Upload to AWS S3 + Cloudfront
 
 This will help to automated uploading Angular project build code to AWS S3 and CloudFront cached invalidation part. This will ensure to take backup of existing code for rollback operation if required.
