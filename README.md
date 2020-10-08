@@ -6,6 +6,7 @@
 
 This will help to automated uploading Angular project build code to AWS S3 and CloudFront cached invalidation part. This will ensure to take backup of existing code for rollback operation if required.
 
+![Feature Image](https://repository-images.githubusercontent.com/288531197/2da1e700-099e-11eb-84a9-d7167fd15c44)
 
 ## Prerequisites  ![to-do-list](https://user-images.githubusercontent.com/3996105/95450050-4fda3b80-0983-11eb-8e43-4d98a4f77101.png)
 
