@@ -2,7 +2,7 @@
 <img src="https://img.shields.io/badge/made%20with-python-blue.svg" alt="made with python">
 <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="MIT License">
 
-# Angular Build Upload to AWS S3 + Cloudfront 🚀🚀🚀
+# Angular Build Upload to AWS S3 + CloudFront 🚀🚀🚀
 
 This will help to automated uploading Angular project build code to AWS S3 and CloudFront cached invalidation part. This will ensure to take backup of existing code for rollback operation if required.
 
