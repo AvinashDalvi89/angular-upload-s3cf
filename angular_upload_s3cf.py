@@ -46,6 +46,7 @@ class DeploymentService():
         self.distribution_id = request.get('distributionId')
         self.portal = request.get('portal')
         self.build_command = request.get('buildCommand')
+        self.backup_folder = request.get('backupFolder')
         if request.get('expectedList'):
             self.expected_list = request.get('expectedList')
         else:
@@ -71,13 +72,16 @@ class DeploymentService():
 
         try:
             folder_list, file_list = list_object = self.list_objects()
-            backup_folder_name = "backup_"+ datetime.datetime.now().strftime("%d%m%Y")
+            if self.backup_folder:
+                backup_folder_name = self.backup_folder
+            else:
+                backup_folder_name = "backup_"+ datetime.datetime.now().strftime("%d%m%Y")
             if backup_folder_name not in folder_list:
                 self.s3_client.put_object(Bucket=self.bucket_name, Key=(backup_folder_name + '/'))
 
             for file in file_list:
                 file_header_name = file.split(".")
-                print(file_header_name)
+                #print(file_header_name)
                 '''
                 TODO Add exclusion of file
                 can exclude those files which not required to push every time 
@@ -121,8 +125,8 @@ class DeploymentService():
                     file_name = self.get_file_name(list.get('Key'))
                     file_array.append(file_name)
 
-        print(folder_array)
-        print(file_array)
+        #print(folder_array)
+        #print(file_array)
         return folder_array,file_array
 
     def create_build(self):
@@ -140,7 +144,7 @@ class DeploymentService():
         try:
             print("Uploading code to S3 is in progress...")
             root_path = self.build_path
-            print(root_path)
+            #print(root_path)
             image_dir = False
             for root, dirs, files in os.walk(root_path):
                 #print(root)
